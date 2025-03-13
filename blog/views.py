@@ -17,7 +17,7 @@ class PublicationCreateView(CreateView):
     template_name = 'publication-create.html'
     fields = ['title', 'body', 'author']
 
-class PublicationUpdateView(CreateView):
+class PublicationUpdateView(UpdateView):
     model = Publication
     template_name = 'publication-update.html'
     fields = ['title', 'body', 'author']

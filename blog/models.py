@@ -14,3 +14,5 @@ class Publication(models.Model):
     
     def get_absolute_url(self):
         return reverse('publication-detail', kwargs={'pk': self.pk})
+    
+   

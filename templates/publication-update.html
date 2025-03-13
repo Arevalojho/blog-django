@@ -2,8 +2,7 @@
 
 {% block content %}
     <h2>Editar publicación</h2>
-    <form method="post">
-    <footer>
+    <form method="post"> 
         {% csrf_token %}
         {{ form.as_p }}                                                 
         <button type="submit">Guardar cambios</button>
