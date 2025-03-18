@@ -4,6 +4,7 @@ from .views import (
                         PublicationDetailView,
                         PublicationCreateView,
                         PublicationUpdateView,
+                        PublicationDeleteView,
                     )
 
 
@@ -12,5 +13,6 @@ urlpatterns = [
     path('Publication/<int:pk>/', PublicationDetailView.as_view(), name='publication-detail'),
     path('Publication/new/', PublicationCreateView.as_view(), name='publication-create'),
     path('Publication/<int:pk>/update/', PublicationUpdateView.as_view(), name='publication-update'),
+    path('Publication/<int:pk>/delete/', PublicationDeleteView.as_view(), name='publication-delete'),
 ]
    

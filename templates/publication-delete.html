@@ -1,0 +1,9 @@
+{% extends "_base.html" %}	
+
+{% block content %}
+    <h2>¿Desea eliminar la publicación "{{ publication.title }}"? </h2>
+    <form method="post">
+        {% csrf_token %}                    
+       <button type="submit">Si</button>
+    </form>                 
+{% endblock content %}
