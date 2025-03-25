@@ -4,7 +4,9 @@
     <h2>{{ publication.title }}</h2>
     <p>{{ publication.author }}</p>
     <p>{{ publication.body }}</p>
-<a href="{% url 'publication-update' publication.pk %}">Editar</a> 
-<!-- button eliminar -->
-<a href="{% url 'publication-delete' publication.pk %}">Eliminar</a>
+    {% if publication.author.pk == request.user.pk %}
+        <a href="{% url 'publication-update' publication.pk %}">Editar</a> 
+        <!-- button eliminar -->
+        <a href="{% url 'publication-delete' publication.pk %}">Eliminar</a>
+    {% endif %}
 {% endblock content %}
