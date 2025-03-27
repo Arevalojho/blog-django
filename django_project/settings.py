@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     # local apps
     'blog',
     'accounts',
+     # apps 3eros
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +134,6 @@ LOGIN_REDIRECT_URL = 'publications-list'
 
 # logout redirect
 LOGOUT_REDIRECT_URL = 'publications-list'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATES_PACKS = 'bootstrap5'
